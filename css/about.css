@@ -1,0 +1,83 @@
+
+ /* -- common 50%:Left 
+	.common_left_Wrap { position:absolute; width:50%; height:100%;  top:0; left:0;}
+	.common_left_Wrap h2 { position:absolute; top:40%; margin-top:-40px; font-size:40px; left:50%; text-align:center; font-family: 'Raleway', sans-serif;}
+
+	.common_left_Wrap ul {position:absolute; width:100px; left:50%; top:50%; margin-left:-35px; margin-top:70px;}
+	.common_left_Wrap ul li { position:relative; width:20px; height:20px; border-radius:25px; background:transparent; margin-top:20px; }	
+	.common_left_Wrap ul li span { display:block; width:5px; height:5px;  border-radius:7px; margin:7px auto; }
+	.common_left_Wrap ul li h4 { position:absolute; width:70px; left:30px; top:1px; font-size:10px;  }
+-- */	
+	
+/* --  Left  -- */
+/*    #about .about_leftWrap {background:#e52467;}
+	#about .about_leftWrap p.seroLine {position:absolute; width:1px; height:80px; left:50%; top:50%; margin-left:-19px; margin-top:103px; background:rgba(255,255,255,0.5);}*/
+	/*#about .about_leftWrap h2 { width:200px; padding:10px;  margin-left:-100px; color:white;}*/
+	/*#about .about_leftWrap ul { position:absolute; width:100px; left:50%; top:50%; margin-left:-29px; margin-top:70px;   }*/
+/*	#about .about_leftWrap ul li {  border:1px solid rgba(255,255,255,0); box-sizing:border-box; }
+	#about .about_leftWrap ul li.view { border:1px solid rgba(255,255,255,0.5); z-index:7; }
+	#about .about_leftWrap ul li span { background:white; }
+	#about .about_leftWrap ul li h4 { color:white;}
+
+
+/* -- Right About: 300%_Slide Wrap -- */
+body {font-size:100%; font-size:16px;}
+#about .rightWrap {position:absolute; width:50%; right:0; height:100%; overflow:hidden; }
+#about .rightWrap #about_list {position:absolute; width:300%;  height:100%; top:0; left:0;}
+#about .rightWrap #about_list .absoutSlide{position:relative; float:left; overflow:hidden; width:33.333%; height:100%; padding:1.250em 0.625em;}
+
+	
+	/* -- WHO  -- */
+#about_list article#who {width:100%; height:100%;}
+#about_list #who .who_text {width:100%; margin-bottom:0.938em; line-height:1.45em; font-size:0.75em; text-align:center;}
+	
+#about_list .who_text h5 {padding:0.313em 0; color:#e52467; font-family: 'Raleway', sans-serif;}
+#about_list #who .who_text02 {overflow:hidden; font-family: 'Raleway','Noto Sans KR' sans-serif;}
+#about_list #who .who_text02 .who_img {width:25px; height:20px; margin:0 auto;}
+#about_list #who .who_text02 .who_text02_padding {float:left; width:80%; margin:0 auto; margin-left:10%;} 
+		
+	/* -- Skill  -- */
+#about_list article#skill {width:80%; height:100%; left:0; }
+#about_list article#skill h2 {text-align:center; color:#e52467; font-family: 'Raleway', sans-serif; font-size:20px; line-height:2em; }
+#about_list article#skill .skillBox{ width:90%; height:80%; margin-left:5%; margin:0 auto; overflow:hidden; }
+#about_list #skill .skillBox ul li{ position:relative; /*border:1px solid silver;*/ width:60%; margin:25px auto; border-radius:7px; }
+
+    #about .rightWrap #about_list #skill .skillBox ul li h4 { position:absolute; left:-29%; top:-5px; font-family: 'Raleway', sans-serif; font-size:12px;  }
+    #about .rightWrap #about_list #skill .skillBox  ul li h5 { position:absolute; right:-12%; top:-20%; font-family: 'Raleway', sans-serif; font-size:14px;   }
+    #about .rightWrap #about_list #skill .skillBox  ul.img li h5 { position:absolute; right:-12%; top:-20%; font-family: 'Raleway', sans-serif; font-size:14px;   }
+    #about .rightWrap #about_list #skill .skillBox ul li span { height:7px; display:block; width:0%; background:#e52467; border-radius:7px;}
+    #about .rightWrap #about_list #skill .skillBox p { width:450px; margin:0 auto; text-align: center;}
+    #about .rightWrap #about_list #skill h2 { color:#e52467; /*line-height:2em;*/ font-family: 'Raleway', sans-serif; font-size:14px;  }
+
+	#about .rightWrap #about_list #skill #skill-ex { position:absolute; bottom:10%; left:50%;  margin-left:-45%; }
+
+	#about .rightWrap #about_list #skill div.skillBox h4 { color:#e52467; line-height:2em; font-family: 'Raleway', sans-serif; font-size:14px; text-align:center; }
+	#about .rightWrap #about_list #skill div.skillBox p { line-height:2em; font-family: 'Raleway', sans-serif; font-size:12px; }
+
+
+	/* -- WORKSTROY -- */	
+    #about .rightWrap #about_list article#w_stroy {/*position:absolute; */width:80%; height:100%;/* border:1px solid rgba(229, 36, 103, 0.2);*/ left:0; }
+    #about .rightWrap #about_list #w_stroy .w_Box { width:90%; height:80%;  margin-left:5%; text-align:center;  }
+    #about .rightWrap #about_list #w_stroy .w_Box ul li { /*background:yellow;*/ margin-bottom:30px;   }
+	#about .rightWrap #about_list #w_stroy .w_Box ul li h2 { text-align:center; color:#e52467; line-height:2em; font-family: 'Raleway', sans-serif; font-size:20px; }
+
+	#about .rightWrap #about_list #w_stroy .w_Box ul li ol li { text-align:center;   font-family: 'Raleway', sans-serif;  font-family: 'Noto Sans Korean', sans-serif; font-size:12px; }
+
+	#about .rightWrap #about_list #w_stroy .w_Box ul li:nth-child(3) ol li:nth-child(1) img {width:10%; height:10%;  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

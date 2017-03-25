@@ -1,0 +1,33 @@
+/* CSS Document */
+
+
+/*------------------------------------------------------------------------------------------
+                                        * Common *
+-------------------------------------------------------------------------------------------*/
+
+/* -- leftWrap: common 50% of Left -- */
+.leftWrap {position:absolute; top:0; left:0; width:50%; height:100%;}
+.leftWrap h2 {position:absolute; top:40%; left:50%; margin-top:-40px; font-size:40px; text-align:center; font-family: 'Raleway', sans-serif;}
+.leftWrap p.seroLine {position:absolute; width:1px; height:80px; left:50%; top:50%;}
+.leftWrap h2 {width:200px; padding:10px; margin-left:-100px;}
+.leftWrap ul {position:absolute; width:100px; left:50%; top:50%; margin-top:70px;}
+.leftWrap ul li {position:relative; width:20px; height:20px; margin-top:20px; box-sizing:border-box; border-radius:25px; background:transparent;}	
+.leftWrap ul li span {display:block; width:5px; height:5px; margin:7px auto; border-radius:7px;}
+.leftWrap ul li h4 {position:absolute; left:30px; top:1px; width:70px; font-size:10px;}
+
+/* -- rightWrap: common 50% of Reft -- */
+.rightWrap {position:absolute; right:0; width:50%; height:100%;}  
+
+
+
+/*------------------------------------------------------------------------------------------
+                                        * About:Page01 *
+-------------------------------------------------------------------------------------------*/
+
+.leftWrap.about_leftWrap p.seroLine {margin-left:-19px; margin-top:103px; background:rgba(255,255,255,0.5);}
+.leftWrap.about_leftWrap h2 {width:200px; padding:10px; margin-left:-100px; color:white;}
+.leftWrap.about_leftWrap ul {margin-left:-29px;}
+.leftWrap.about_leftWrap ul li {border:1px solid rgba(255,255,255,0);}
+.leftWrap.about_leftWrap ul li.view {border:1px solid rgba(255,255,255,0.5);}
+.leftWrap.about_leftWrap ul li span { background:white;}
+.leftWrap.about_leftWrap ul li h4 { color:white;}

@@ -1,0 +1,13 @@
+	
+
+/*	half-page */
+
+	#pawork .workWrap{ position:absolute; width:100%; height:100%;  top:0; left:0; background-color:#e52467;}
+    #pawork .color{ position:absolute; width:50%; height:100%;  top:0; left:0; background-color:#fff; }
+    #pawork .color h2{ color:#e52467; position:absolute; right:0; top:4%; font-size:40px; font-family: 'Raleway', sans-serif;  }
+    #pawork .workWrap div.txt_w{ position:absolute; width:50%; height:100%;  top:0; right:0;  }
+    #pawork .workWrap div.txt_w h2{ color:#fff; position:absolute; left:0; z-index:6; top:4%; font-size:40px; font-family: 'Raleway', sans-serif;}
+	
+	/* common layout */
+	img{width: 100%;height:100%;}
+	.workWrap article.artbox { position:absolute; width:20%; height:20%; }

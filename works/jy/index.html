@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	
+<title>jy_potfolio-03</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/type.css">
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/magic.min.css" />
+<link rel="shortcut icon" href="img/icon.ico">
+
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/page3.js"></script>
+<script src="js/jquery.1.10.2.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/typed.js" type="text/javascript"></script>
+
+<script>
+$(function(){
+        $("#typed").typed({
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 30,
+            backDelay: 500,
+            loop: true,
+            contentType: 'html', // or text
+            loopCount: false,
+        });
+
+		var navView = 0; // menu부분 사라지는 
+		$("nav button").click(function(){
+			if(navView == 0) {
+				$("nav").css({background:'rgba(245,203,203,0.8)'})
+					    .animate({left:"-5%"},700,function(){
+					$("nav button").addClass("close")
+				})
+				navView = 1; 
+
+				$("nav ul li").eq(0).delay(500).fadeIn().animate({marginLeft:10})
+				$("nav ul li").eq(1).delay(550).fadeIn().animate({marginLeft:10})
+				$("nav ul li").eq(2).delay(600).fadeIn().animate({marginLeft:10})
+				$("nav ul li").eq(3).delay(650).fadeIn().animate({marginLeft:10})
+			} else {
+				$("nav").animate({left:"-45%"},700,function(){
+					$("nav button").removeClass("close")
+					$("nav").css({background:''})
+					$("nav ul li").css({marginLeft:-20}).hide() 
+				});
+				navView = 0;								
+			}
+
+			$("nav ul li").click(function(){
+				var winHeight = $(window).height()
+				var chkIndex = $(this).index()
+				$("html,body").stop().animate({scrollTop:winHeight * chkIndex})
+				$("nav ul li a").removeClass("view")
+				$("a",this).addClass("view") //클릭한 this안에 있는 a
+				return false
+				})
+			});
+
+			var winHeight = $(window).height()
+
+			$(window).resize(function(){
+			var winHeight = $(window).height()
+			})
+
+			$(window).scroll(function(){
+
+				var scrPos = $(window).scrollTop()
+				if (scrPos >= winHeight) {
+
+					$("#page02 article h6#lineTop").stop().delay(500).animate({left:0},1000)
+					$("#page02 article h6#lineRight").stop().delay(1400).animate({top:0},1000)
+					$("#page02 article h6#lineBottom").stop().delay(2300).animate({right:0},1000)
+					$("#page02 article h6#lineLeft").stop().delay(3200).animate({bottom:0},1000)
+					$("#box1").stop().delay(500).animate({right:0},1000)
+					$("#box2").stop().delay(500).animate({right:0},1000)
+
+				} else if (scrPos < 100){
+					$("#page02 article h6#lineTop").css({left:"-120%"})
+					$("#page02 article h6#lineRight").css({top:"-100%"})
+					$("#page02 article h6#lineBottom").css({right:"-100%"})
+					$("#page02 article h6#lineLeft").css({bottom:"-100%"})
+					$("#box1").css({left:"-50%"})
+					$("#box2").css({right:"-50%"})
+				}
+			});
+
+	});
+</script>
+
+</head>
+<body>
+	<!--//nav-->
+	<nav>
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">PORTFOLIO</a></li>
+			<!-- <li><a href="#">WORKSTORY</a></li> -->
+			<li><a href="#">CONTACT</a></li>
+		</ul><!--menu-->
+		<ol>
+			<li><a href="#"><img src="img/blog.png" alt="" /></a></li>
+			<li><a href="#"><img src="img/fb.png" alt="" /></a></li>
+			<li><a href="#"><img src="img/twitter.png" alt="" /></a></li>
+		</ol><!--sns-->
+		<button onfocus="this.blur();"></button>
+	</nav>
+	<!--//page01-->
+	<div id="page01" class="wrap">
+		<h1><img src="img/logo.png" alt="JY logo /"></h1>
+		<div id="visual">
+			<hgroup> 
+  					<h2>
+                        <div id="typed-strings">
+                            <p>
+                            	 WEB PUBLISHER & </br>
+                            	GRAPHIC DESIGNER</p>
+                            <p>		
+                            	WELLCOME to </br>
+                            	JY WEB PORTFOLIO
+                            </p>
+                        </div >
+                              <span id="typed"></span>
+                     </h2>
+             
+                     <p> 
+                     	Welcome to Jy's personal web portfolio site. 
+                     </p>
+                     <p>
+                     	I hope to work with you. 
+                     </p>
+                     <p>
+                     	Please, leave a message <br />
+                     	by jkim39426@naver.com<br />
+                    	by phone 010.9967.9026 </p>
+        
+			</hgroup>
+		</div>
+		<button id="rebtn"><a href="resume.html">RESUME</a></button
+        
+	></div><!--//page01-->
+
+	<!--//page02-->
+	<div id="page02" class="wrap">
+		<div id="box1"></div>
+		<h2>ABOUT    JINYOUNG</h2>
+			<article>
+                <p>
+                    <span>J</span>
+                                   
+                    Hello,
+                    I am Jinyoung Kim.</br>
+                    I am a web publisher and</br>
+                    a digital graphic productor.</br>
+                    I am  currently looking for a job.
+                    </br>I hope to work with you!</br>
+                    Enjoy Jy’s personal web portfolio.
+                    
+                </p>
+                <p>
+                    <span>Y</span>
+                    안녕하세요!</br>
+                    저는 웹퍼블리셔와 디자인을 공부했습니다.</br>
+                    지금 현재 직장을 구하고 있으며 여러분과</br>
+                    함께 일을 하기를 원합니다.</br>
+                    jkm39426@naver.com</br>
+                    010.9967.9026</br>
+                    연락을 기다리겠습니다.</br>
+                    감사합니다.
+            </p>
+            <h6 id="lineTop"></h6>
+            <h6 id="lineRight"></h6>
+            <h6 id="lineBottom"></h6>
+            <h6 id="lineLeft"></h6>
+		</article>
+	</div><!--//page02-->
+	
+	<!--//page03-->
+	<div id="page03" class="wrap">
+		<h2>Web Desgin</h2>
+		<div class="container">
+		
+		<div class="box">
+			<div class="box-content">
+				<div class="box-wrapper">
+					ARITAUM<span class="name">Cooling Make-up</span>
+					<div class="row">web desgin:Photoshop</div>					
+				</div>
+			</div>
+			<div class="box-overlay magictime" data-hover="slideLeft" data-return="slideLeftRetourn">
+				<img src="img/1.jpg" alt="" />
+			</div>
+			
+		</div>
+		
+		<div class="box">
+			<div class="box-content">
+				<div class="box-wrapper">
+					HELLO Publisher<span class="name">Portfolio Desgin</span>
+					<div class="row">Artwrok:Photoshop</div>					
+				</div>	
+			</div>
+			<div class="box-overlay magictime" data-hover="slideUp" data-return="slideUpRetourn">
+				<img src="img/2.jpg" alt="" />
+			</div>
+				
+		</div>
+		
+		<div class="box">
+			<div class="box-content">
+				<div class="box-wrapper">
+					Samsung<span class="name">삼성코닝어드밴스드글라스<span>
+					<div class="row">Publishing:Coding</div>					
+				</div>	
+			</div>
+			<div class="box-overlay magictime" data-hover="slideRight" data-return="slideRightRetourn">
+				<img src="img/3.jpg" alt="" />
+			</div>
+			<a class="link" href="work/samsung/index.html" target="_blank"></a>	
+		</div>	
+		
+		
+		<div class="box">
+			<div class="box-content">
+				<div class="box-wrapper">
+					YSL:Beauty<span class="name">Christmas:Candy Lip</span>
+					<div class="row">web desgin:Photoshop</div>					
+				</div>	
+			</div>
+			<div class="box-overlay magictime" data-hover="slideLeft" data-return="slideLeftRetourn">
+				<img src="img/4.jpg" alt="" />
+			</div>
+			<a class="link" href="https://dribbble.com/shots/907170-Colossians-1-16" target="_blank"></a>				
+		</div>	
+		
+		<div class="box">
+			<div class="box-content">
+				<div class="box-wrapper">
+					YSL:Beauty<span class="name">Christmas:snow Princess</span>
+					<div class="row">web desgin:Photoshop</div>						
+				</div>	
+			</div>
+			<div class="box-overlay magictime" data-hover="slideDown" data-return="slideDownRetourn">
+				<img src="img/5.jpg" alt="" />
+			</div>					
+		</div>	
+		
+		<div class="box">
+			<div class="box-content">
+				<div class="box-wrapper">
+					YSL:Beauty<span class="name">Christmas:Red Lip</span>
+					<div class="row">web desgin:Photoshop</div>						
+				</div>	
+			</div>
+			<div class="box-overlay magictime" data-hover="slideRight" data-return="slideRightRetourn">
+				<img src="img/6.jpg" alt="" />
+			</div>									
+		</div>
+	</div>	
+	</div><!-- page03 -->
+	<!--//page04-->
+	<div id="page04" class="wrap">
+		<h2>
+			Please, Leave a Message.<br />
+			May I JOIN?
+		</h2>
+		<table>
+			<form action="mail.php" method="post">
+				<tr>
+					<td>
+						<label for="writer">NAME</label>
+						<input id="writer" type="text" placeholder="이름을 입력해주세요"/>
+					</td>
+					<td>
+						<label for="celnum">CELLPHONE</label>
+						<input id="celnum" type="text" placeholder="전화번호를 입력해주세요"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<label for="memo">MESSAGE</label>
+						<textarea id="memo" placeholder="내용을 입력해주세요"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" id="btnSend" value="send" />
+					</td>
+				</tr>
+			</form>
+		</table>
+		
+		
+		<h5>
+				JinYoung VD  010-9967-9026  EMAIL : JKIM39426@naver.com  2016. ALL RIGHTS RESERVED.
+		</h5>
+
+
+		</footer>
+	</div><!--//page04-->
+    
+
+</html>

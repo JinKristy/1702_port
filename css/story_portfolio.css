@@ -1,0 +1,31 @@
+
+
+#story_portfolio{ width:100%; height:200%; position:relative; overflow:hidden;}
+
+	/* --  Leftpage04_WorkStroy_PORTFOLIO -- */
+	.story_left_Wrap { position:absolute; width:30%; height:200%;  top:0; left:0; border-top:1px solid rgba(241,58,143,0.48);}
+		/* -- #story_portfolio .story_left_Wrap .fix_s{   width:500px; height:400px; top:400px;}-- */
+	
+	#story_portfolio .story_left_Wrap h2 { position:fixed; top:600px; margin-top:-25%; width:400px; font-size:35px; padding:3%; left:35%; margin-left:-30%; text-align:center; color:#e52467; font-family: 'Raleway', sans-serif; z-index: 0;}/*about_itle*/
+	.story_left_Wrap ul { position:fixed; width:8%; height:150px; left:45%; margin-left:-33%;  top:430px; margin-bottom:60px;}
+	.story_left_Wrap ul li { position:relative; width:20px; height:20px; border-radius:25px; background:transparent; margin-top:25px;}	
+	.story_left_Wrap ul li span { display:block; width:5px; height:5px; border-radius:7px; margin:7px auto; }
+	.story_left_Wrap ul li h4 { position:absolute; width:70px;/* right:-130px; top:10px; text-align:left; */  left:30px; top:1px; font-size:12px; }
+	
+	/* -- Left page04_WorkStroy -- */
+	.portfolio_left_Wrap{ position:absolute; width:70%; height:100%;  top:0; left:0; /*border:1px solid blue;*/}
+	#story_portfolio .story_left_Wrap{ background:#fff; /*border:1px solid blue;*/ }
+	
+	#story_portfolio .story_left_Wrap ul li { border:2px solid #e52467; }
+	#story_portfolio .story_left_Wrap ul li span { background:#e52467; }
+	#story_portfolio .story_left_Wrap ul li h4 { color:#e52467;}
+
+/* --  Right -page04_PORTFOLIO- */
+	#story_portfolio .story_right_Wrap { position:absolute; width:70%; right:0%; height:200%;  /*border:1px solid blue;*/} 
+	#story_portfolio .story_right_Wrap #story_list { position:absolute; width:100%; right:0;height:150%; top:0; left:0; /*border:1px solid red; */z-index:3;}
+	
+	#story_portfolio .story_right_Wrap div#story_list .storySlide .story_img_visit img { border:0.4px solid rgba(212,205,208,0.5);  width:100%;}
+	#story_portfolio .story_right_Wrap div#story_list .storySlide .story_img_visit p{  z-index:10;  position:absolute; top:200px;  left:50%;   color:rgba(251,52,157,0.82); background-color:rgba(255,249,249,0.6);  font-family: 'Raleway', sans-serif; font-size:20px; animation:ani 0.8s infinite alternate; border:0.5px solid #e52467; }
+
+	#story_portfolio .story_right_Wrap div#story_list div.storySlide figcaption{ margin-top:5%; margin-bottom:5%; width:100%; height:40px;   }
+	#story_portfolio .story_right_Wrap div#story_list div.storySlide span img{ margin-top:2%; margin-bottom:6%; }

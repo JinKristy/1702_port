@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* reset */
+body,h1,h2,h3,h4,h5,h6,th,td,input,button { font:12px/1.2 "돋움",dotum, Arial, sans-serif; }
+
+/* visual */
+#visual { width:100%; overflow:hidden; }
+.slider{ height:424px}
+.slider .left, .slider .right{ position:absolute; width:1500px; height:424px; top:0; background-color:rgba(255,255,255,0.8); z-index:2}
+.slider .left{ left:-1500px;}
+.slider .right{left:1024px}
+.slider .img_wrap{ width:5120px; position:absolute; left:-1024px; top:0; z-index:1}
+.slider .img_wrap li{ float:left;}
+.slider .txt_view{ position:absolute; z-index:5 ; width:316px; height:328px; overflow:hidden;
+right:60px; top:50px}
+.slider .txt_view .txt_wrap{ width:1580px; position:absolute; left:-316px; top:0; border:1px solid white; z-index:12;  }
+.slider .txt_view .txt_wrap li{ float:left;}
+.slider .txt_view .btn{ position:absolute; left:26px; bottom:60px;  z-index:14;} 
+.slider .txt_view .btnOn_off { position:absolute; left:112px; bottom:63px; border:none; background-color:transparent;  z-index:14;}
+.slider .txt_view .btn li{ float:left; margin:3px; cursor:pointer}
+
+/* mainContents */
+.mbox { float:left; width:330px; height:190px; margin:3px; border:1px solid #ddd; position:relative; }
+.mbox .mb_title { padding:30px 0 0 30px; }
+.mbox ul { margin:15px 0 0 10px; }
+.mbox ul li { line-height:20px; background:url(../img/bul_pink.gif) no-repeat left center; padding-left:10px; margin-left:-10px; }
+.mbox .more { background:url(../img/btn_more.gif) no-repeat; width:27px; height:27px;
+			  display:block; text-indent:-9999px; overflow:hidden; position:absolute; top:30px; right:20px; }
+.mbox ul li a { color:#666; }
+.mbox ul li a:hover { text-decoration:underline; color:#333; }
+.mbox .mov_link { display:block; }
+.mbox .mov_link .play { display:block; height:188px; width:100%; position:absolute;
+					    background:url(../img/img_video_play.png) no-repeat center center;
+						top:0; left:0; text-indent:-9999px; overflow:hidden; }

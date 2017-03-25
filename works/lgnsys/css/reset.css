@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/* reset */
+body,p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,rieldset,input,button { margin:0; padding:0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+body,h1,h2,h3,h4,h5,h6,th,td,input,button,div { font:12px/1.2 "NanumGothic","고딕","돋움",dotum, Arial, sans-serif; letter-spacing:0.7px; }
+h2 { font-size:2rem; }
+h3 { font-size:1rem; }
+ul,ol,li { list-style:none; }
+img,fieldset { border:none; vertical-align:middle; }
+a { text-decoration:none; color:#333; }
+em, strong, address { font-style:normal; font-weight:normal; }
+body, html { width:100%; height:100%; color:#333; position:relative; }

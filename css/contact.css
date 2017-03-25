@@ -1,0 +1,35 @@
+
+/* --  Left -- */
+#contact .contact_left_Wrap{ background:#fff; }
+#contact .contact_left_Wrap h2{ width:200px; padding:10px;  margin-left:-100px; color:#e52467; top:27.5%;}
+#contact .contact_left_Wrap h3 { position:absolute; width:400px; top:40%; font-size:14px;  margin-left:-200px; left:50%; text-align:center; font-family: 'Raleway', sans-serif; color:#e52467; line-height:20px; }
+
+#contact ol.sns { position:absolute; left:50%; margin-left:-73px;  width:170px;  height:23px; bottom:20%;    }
+#contact ol.sns li { float:left;  display:block;  margin-right:18px; opacity:0.9;  }
+#contact ol.sns li:hover { opacity:1;  }
+
+
+
+
+/* --  Right-- */
+ #contact .contact_right_Wrap { position:absolute; width:50%; right:0; height:100%; overflow:hidden; background-color:#e52467; }
+#contact .contact_right_Wrap table { position:absolute; width:80%; left:20%; top:25%; text-decoration: none;}
+#contact .contact_right_Wrap table tr.c01 td {height:60px;}
+#contact .contact_right_Wrap table tr.c02 td {height:250px;}
+#contact .contact_right_Wrap table tr.c03 td {height:60px; left:25%;}
+#contact .contact_right_Wrap table tr.c04 td {height:60px; width:80%; left:10%;}
+
+#contact .contact_right_Wrap table tr td { position:relative; }
+#contact .contact_right_Wrap input { text-align:center; background:rgba(255, 255, 255, 0); width:60%; height:20px; border:1px solid rgba(255, 255, 255, 0.9); font-size:12px; text-indent:5px; }
+
+#contact .contact_right_Wrap input #btnSend { position:absolute; width:50px; color:rgba(255, 255, 255, 0); margin-top:30px; margin-left:-25%; left:50%; border:1px solid black; }
+#contact .contact_right_Wrap textarea#memo { width:80%;  height:250px; background:rgba(255, 255, 255, 0); border:1px solid rgba(255, 255, 255, 0.9); font-size:12px; text-indent:5px; line-height:20px; margin-bottom:50px; text-align:center; }
+
+#contact .contact_right_Wrap table tr td label { color:rgba(255, 255, 255, 1); position:absolute; top:-20px; text-align:center; font-family: 'Raleway', sans-serif;   }
+#contact .contact_right_Wrap table tr.c01 td label { left:50%; margin-left:-32%; }
+#contact .contact_right_Wrap table tr.c03 td label { left:50%; margin-left:-26%; }
+
+
+
+#contact .contact_right_Wrap table tr.c02 td label { color:rgba(255, 255, 255, 1); position:absolute; top:-20px; text-align:center; font-family: 'Raleway', sans-serif; left:50%; margin-left:-15%; }
+

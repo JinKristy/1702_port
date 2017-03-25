@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewd" content="width=device-width, initial-scale=1, minimum-scale=1, macimum-scale=1, uset-scalable=no" >
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DIA:JY_010.9967.9026</title>
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/portfolio.css">
+<link rel="stylesheet" href="css/story_portfolio.css">
+<link rel="stylesheet" href="css/artwork.css">
+<link rel="stylesheet" href="css/paperwork.css">
+<link rel="stylesheet" href="css/photograph.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/content.css">
+<link rel="stylesheet" href="css/type.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+
+<link rel="shortcut icon" href="img/dia.ico">
+
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/ending.js"></script>
+<script src="js/index.js"></script>
+<script>
+    $(document).ready(function(){
+
+    var ht = $(window).height();
+        //브라우저의 높이 값을 section의 높이 값으로 지정
+        $("section").height(ht);
+        //브라우저가 리사이즈 될 때마다 브러우저와 section 높이 값을 갱신
+        $("window").on("resize",function(){
+           var ht = $(window).height();
+        $("section").height(ht);     
+        });
+        
+    /* btnMenu */
+    var menuVar = 0;
+     $(".btnMenu").click(function(){
+        if(menuVar == 0) {
+            $(".navWrap").slideDown();
+            menuVar = 1;            
+            return false;
+        } else {
+            $(".navWrap").slideToggle();
+            menuVar = 0;                  
+            return false;
+        }
+      });
+        
+     $(".container" ).click(function(){
+        $(this).toggleClass('active').removeClass("chColor");
+    });
+
+
+     $("ul#gnb li").click(function(){         
+        $(".navWrap").slideUp();        
+        var chkIndex = $(this).index() + 1;
+        var winHeight = $(window).height();
+        $("html,body").animate({scrollTop:winHeight * chkIndex});  
+        if(chkIndex == 1) {
+            $(".container").removeClass("active").removeClass("chColor02").addClass("chColor");
+        } else if (chkIndex == 2) {
+            $(".container").removeClass("active").removeClass("chColor").addClass("chColor02");
+        } else if ( chkIndex == 3) {
+            $(".container").removeClass("active").removeClass("chColor").removeClass("chColor02");          
+        } else if ( chkIndex == 4) {
+              $(".container").removeClass("active").removeClass("chColor").addClass("chColor02");          
+        } else if ( chkIndex == 5) {
+            $(".container").removeClass("active").removeClass("chColor02").addClass("chColor");
+
+        } else if ( chkIndex == 6) {
+            $(".container").removeClass("active").removeClass("chColor").removeClass("chColor02");          
+        } 
+        return false;
+     });
+	
+	/* btnMenu  색 */
+     $(window).scroll(function(){
+        var winHeight = $(window).height();
+        var scrPos = $(window).scrollTop();
+        if ( scrPos >= winHeight * 7 ){
+            $(".container").removeClass("active").removeClass("chColor").removeClass("chColor02");    
+         } else  if ( scrPos >= winHeight * 6 ) {
+            $(".container").removeClass("active").removeClass("chColor").addClass("chColor02");   
+         } else  if ( scrPos >= winHeight * 5 ) {
+            $(".container").removeClass("active").removeClass("chColor").removeClass("chColor02");    
+         } else if ( scrPos >= winHeight * 4 ){
+              $(".container").removeClass("active").removeClass("chColor").addClass("chColor02");          
+         } else if ( scrPos >= winHeight * 3 ){
+            $(".container").removeClass("active").removeClass("chColor").removeClass("chColor02");  
+
+         } else if ( scrPos >= winHeight * 2 ){
+            $(".container").removeClass("active").removeClass("chColor").addClass("chColor02");    
+                        $(".svg_dia svg").css({"animation-play-state":"running"});           
+         } else if ( scrPos >= winHeight * 1 ){
+            $(".container").removeClass("active").removeClass("chColor02").addClass("chColor");         
+         }
+    });
+		/* typed */
+        $("#typed").typed({
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 30,
+            backDelay: 500,
+            loop: true,
+            contentType: 'html', // or text
+            loopCount: false,
+        });
+
+		/* about */
+        $("p#about_text_under").delay(1000).fadeIn();
+        $(".mouse_scroll").click(function(){
+            var winHeight = $(window).height() * 1;
+
+            $("html,body").stop().animate({scrollTop : winHeight});
+            return false;
+         });
+
+        $("#about ul li").eq(0).addClass("view");
+
+        $("#about ul li").click(function(){
+            var chkIndex = $(this).index();
+                $("#about_list").animate({left:-99 * chkIndex + "%"});
+            
+                $("#about ul li").removeClass("view");
+                $(this).addClass("view");
+            return false;
+        });
+        
+        $("p#about_text_under").delay(1000).fadeIn();
+
+        $("#about ul li").click(function(){
+            var chkIndex = $(this).index();
+                if (chkIndex == 1) {
+                    var skillColor = ["#e52467","#e52467","#e52467","#e52467","#e52467","#e52467","#e52467","#e5246767"];
+                    var skillVar = [90,80,60,90,80,67,70,90];
+                    var delayVar = 200;
+                    $(".skillBox ul li span").each(function(e){
+                        $(this).css({backgroundColor:skillColor[e]});
+                         delayTime = delayVar * e;
+                        $(".skillBox ul li span").delay(delayVar).eq(e).animate({width:skillVar[e]+"%"},
+                                         {duration:2000, easing:"easeOutBounce",
+                                         step:function(pro) {
+                                            $(".skillBox ul li h5").eq(e).text(Math.ceil(pro) + "%");
+                                         }
+                                    });
+            });
+                } else {
+                    $(".skillBox ul li h5").text("0%");
+                     $(".skillBox ul li span").stop().css({width:0});
+                }
+                $("#about_list").animate({left:-99 * chkIndex + "%"});
+                
+                $("#about ul li").removeClass("view");
+                $(this).addClass("view");
+            return false;
+        });
+
+        $("#portfolio ul li").eq(0).addClass("view");
+         $("#portfolio ul li").click(function(){
+            var chkIndex = $(this).index();
+                $("#portfolio_list").animate({left:-100 * chkIndex + "%"});
+            
+                $("#portfolio ul li").removeClass("view");
+                $(this).addClass("view");
+            return false;
+        });
+
+         // $("#portfolio_list .more").click(function(){
+         //    var winHeight = $(window).height() * 4;
+
+         //    $("html,body").stop().animate({scrollTop : winHeight});
+         //    return false;
+         // });
+
+    $(".facy").fancybox({
+            helpers : {
+                title : {
+                    type : 'inside'
+                }
+            }
+        }); 
+    });
+</script>
+</head>
+
+<body>
+
+<!-- btnMenu -->
+<div class="btnMenu"> <a href="#"></a>
+  <div class="container">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.8 30.8" style="enable-background:new 0 0 31.8 30.8;" xml:space="preserve">
+      <polyline id="XMLID_56_" class="st0" points="2.2,29.5 30.4,29.5 2.2,1.2 "/>
+      <polyline id="XMLID_4_" class="st0" points="2.2,1.2 30.4,1.2 2.2,29.5 "/>
+      <line id="XMLID_32_" class="st1" x1="2.2" y1="15.4" x2="30.4" y2="15.4"/>  
+    </svg>
+  </div>
+</div>
+<!--// btnMenu --> 
+
+<!-- navWrap -->
+<div class="navWrap"> 
+	<div class="lnbWrap">
+      <!-- nav -->
+      <nav>
+        <div class="nav_logo"><a href="index.html"><img src="img/nav_logo.png" alt="logo_dia_pink"></a></div>
+        <ul id="LNB" class="lnb">
+          <!--//실제 카테고리 메뉴가 들어갈 nav 영역-->
+          <li>
+           	<a href="about.html" class="depth1">ABOUT</a>
+          </li>
+          <li>
+            <a href="portfolio.html" class="depth1">WEB-WROK</a>
+          </li>
+          <li>
+           <a href="artwork.html" class="depth1">ART-WORK</a>
+          </li>
+          <li>
+            <a href="paperwork.html" class="depth1">PAPER-WORK</a>
+          </li>
+          <li>
+            <a href="photograph.html" class="depth1">WEB-PAGE</a>
+          </li>
+          <li>
+            <a href="contact.html" class="depth1">CONTACT</a>
+          </li>
+        </ul>
+        <!--// LNB -->
+        <div class="lang"><span><a href="#">KO</a></span> <span> / </span> <span><a href="#">EN</a></span></div>
+        <!-- SNS -->
+        <ul class="sns clearfix">
+          <li><a href="http://blog.naver.com/jkim39426" target="_blank"><img src="img/sns_b.png" alt="naver_blog_link"></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100013527153320" target="_blank"><img src="img/sns_f.png" alt="facebook_link"></a></li>
+          <li><a href="http://instagram.com/jinyoungkristy_/" target="_blank"><img src="img/sns_inst.png" alt="instagram_link"></a></li>
+          <li><a href="https://kr.pinterest.com/" target="_blank"><img src="img/sns_p.png" alt="pinterest_link"></a></li>
+        </ul>
+        <!--// SNS --> 
+        <div class="footer_wrap">
+            <footer class="footer"> JinYoung VD 010-9967-9026 EMAIL : JKIM39426@naver.com 2017. ALL RIGHTS RESERVED. </footer>
+        </div>
+     </nav>
+      <!--// nav --> 
+	</div>
+</div>
+<!--//navWrap--> 
+
+<!-- page00_HOME -->
+<section id="Home" class="fullpage-section">
+  <div class="page00">
+    <h1 class="header_logo"> <img src="img/dia_w.svg" alt="logo_dia_white"> </h1>
+    <!--  typed-strings -->
+    <div id="typed-strings" class="type_about">
+      <p> HELLO <br>
+        I am <br>
+        Jinyoung <br>
+      </p>
+      <p> WELLCOME to <br>
+        JY WEB PORTFOLIO </p>
+    </div>
+    <!--// typed-strings -->
+    <div id="typebox"> <span id="typed"></span> </div>
+    <p class="txt_under"> I am a  web publisher &amp; a digital product designer. </p>
+    <!-- mouse_scroll --> 
+    <div class="mouse_scroll">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <div>
+        <span class="m_scroll_arrows unu"></span> <span class="m_scroll_arrows doi"></span> <span class="m_scroll_arrows trei"></span> </div>
+    </div>
+    <!--// mouse_scroll --> 
+  </div>
+</section>
+<!--// page00_HOME  --> 
+
+<!-- page01_ABOUT -->
+<section id="about" class="fullpage-section">
+  <!-- about_leftWrap -->
+  <div class="leftWrap about_leftWrap bg_pink">
+    <p class="seroLine"></p>
+    <h2>ABOUT</h2>
+    <ul>
+      <li><a href="#"><span></span><h4>WHO</h4></a></li>
+      <li><a href="#"><span></span><h4>SKILL</h4></a></li>
+      <li><a href="#"><span></span><h4>WORKSTORY</h4></a></li>
+    </ul>
+  </div>
+  <!--// about_LeftWrap -->
+  <!-- about_RightWrap -->
+  <div class="rightWrap">
+    <div id="about_list">
+      <!-- Who absoutSlide --> 
+      <div class="absoutSlide">
+        <article id="who" >
+          <div class="who_text who_text01">
+            <p> 안녕하세요!<br>
+              지금 보고 계신 웹 사이트를 기획, 설계, 디자인 한 '김진영' 입니다. <br>
+              감각적이면서 세련된 사이트 구축 제작에 흥미를 느끼면서<br>
+              ‘웹퍼블리셔’ 라는 매력적인 직업에 관심을 <br>
+              가지게 되었습니다. 아직은 미숙하지만 <br>
+              성실히 노력하는 <span>사람</span>이 되겠습니다!<br>
+              감사합니다.<br>
+            </p>
+          </div>
+          <div class="who_text who_text02">
+            <div class="who_img"><img src="img/dia_pink.png" alt="icon of dia_pink"></div>
+            <h5> Who am I ?</h5>
+            <p> 
+              사람들과의 소통이 중요하다고 생각하는 사람<br>
+              나와 다름을 이해하고 존중하는 사람<br>
+              밝고 긍정적인 마인드를 가진 사람<br>
+              그림을 좋아하며 관심이 많은 사람<br>
+              자연을 아끼고 사랑하는 사람<br>
+              <span>시간을 소중히 하는 사람</span><br>
+            </p>
+          </div>
+          <div class="who_text who_text02">
+            <div class="who_img"><img src="img/study_pink.png" alt="icon of study"></div>
+            <h5> Study </h5>
+            <p> 
+              2008 년 3 월 - 2011 년 2 월: 소래고등학교 졸업<br>
+              2008 년 9 월 - 2011 년 1 월: 안산 C &amp; C 미술전문입시학원 수강<br>
+              2011 년 6 월 - 2014 년 12 월: TCC 에서 Art &amp; Science degree 전공<br>
+              2015 년 1 월 - 2015 년 6 월: Seattle Art Institution 편입 Graphic &amp; Web Design 공부 <br>
+              2015 년 8 월 - 2016 년 7 월: SBS 컴퓨터아카데미에서 웹 학과 수강 
+            </p>
+          </div>
+        </article>
+      </div>
+      <!--// Who absoutSlide --> 
+      
+      <!--SKILL absoutSlide -->
+      <div class="absoutSlide">
+        <article id="skill" >
+          <h2>SKILL</h2>
+          <div class="skillBox">
+            <ul>
+              <li>
+                <h4>photoshop</h4>
+                <span></span>
+                <h5>90%</h5>
+              </li>
+              <li>
+                <h4>Illustrator</h4>
+                <span></span>
+                <h5>80%</h5>
+              </li>
+              <li>
+                <h4>Indesign</h4>
+                <span></span>
+                <h5>75%</h5>
+              </li>
+              <li>
+                <h4>Html</h4>
+                <span></span>
+                <h5>80%</h5>
+              </li>
+              <li>
+                <h4>CSS</h4>
+                <span></span>
+                <h5>80%</h5>
+              </li>
+              <li>
+                <h4>Jquery</h4>
+                <span></span>
+                <h5>70%</h5>
+              </li>
+              <li>
+                <h4>Words</h4>
+                <span></span>
+                <h5>90%</h5>
+              </li>
+              <li>
+                <h4>powerpoint</h4>
+                <span></span>
+                <h5>80%</h5>
+              </li>
+            </ul>
+            <div id="skill-ex">
+              <h4> UI x UX Designer</h4>
+              <p> ' Good Design Keeps the User Happpy ' <br>
+                소통을 중요시 생각하며, <br>
+                할 수 있다는 자신감으로 최선을 다하며, <br>
+                좋은 디자인으로 행복을 주는 그러한 부지런한 사람이 되겠습니다. </p>
+            </div>
+            <!-- skill-ex --> 
+          </div>
+          <!-- skillBox --> 
+        </article>
+        <!-- skill --> 
+      </div>
+      <!--SKILL absoutSlide -->
+      
+      <!--WORKSTROY absoutSlide --> 
+      <div class="absoutSlide">
+        <article id="w_stroy"> 
+          <!--   <h2>WORKSTROY</h2> -->
+          <div class="w_Box">
+            <ul>
+              <li>
+                <h2>WORKSTROY</h2>
+                <ol>
+                  <li> 즐겁고 긍정적인 마음으로,<br>
+                    희망을 놓 않으며 완성하자!<br>
+                    꾸준한 배움을 익혀 성장하자!<br>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <h2>CONCEPT</h2>
+                <ol>
+                  <li> Centered content<br>
+                    Powerful stylish<br>
+                    Simple & elaborate<br>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <h2>LOGO</h2>
+                <ol>
+                  <li> <img src="img/dia_00.png" alt="dia_pink" /> </li>
+                  <li> 누구나 사람들에게는 눈에 보이지 않는 지 않는<br>
+                    ‘보물(다이아 캐럿)’을 지니고 있다고 생각합니다.<br>
+                    하지만 그 보물(다이아)의 가치와 크기는 각 개인의<br>
+                    노력에 따라 달라진다고 생각합니다. 처음만 해도<br>
+                    작았던 저의 다이아가 포트폴리오를 준비하면서 점점<br>
+                    더 정교해지고 성장되는 것을 알 수 있었습니다.<br>
+                    디자인/웹에 대한 저의 열정으로 더욱 더 커지고 주변을<br>
+                    아름답게 만들 수 있기를 있기를 바라는 마음으로<br>
+                    다이아를 로고로 설정하게 되었습니다.<br>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+          <!-- interviewBox --> 
+        </article>
+        <!-- w_stroy --> 
+      </div>
+      <!--WORKSTROY absoutSlide --> 
+    </div>
+    <!-- about_list --> 
+  </div>
+  <!--// about_RightWrap --> 
+</section>
+<!--/ /page01_ABOUT --> 
+
+<!-- page02_PORTFOLIO -->
+<section id="portfolio" class="fullpage-section">
+  <div class="leftWrap portfolio_left_Wrap">
+    <p class="seroLine"></p>
+    <h2>WEB-WORK</h2>
+    <ul>
+      <li><a href="#"><span></span>
+        <h4>SAMSUNG:<br>
+          Coding</h4>
+        </a></li>
+      <li><a href="#"><span></span>
+        <h4>LG-n-sys:<br>
+          Coding</h4>
+        </a></li>
+      <li><a href="#"><span></span>
+        <h4>JY:Design & Coding</h4>
+        </a></li>
+      <li><a href="#"><span></span>
+        <h4>tchaikim: <br>
+          Responsive Web</h4>
+        </a></li>
+    </ul>
+  </div>
+  <!-- portfolio_left_Wrap -->
+  <div class="rightWrap portfolio_right_Wrap">
+    <div id="portfolio_list">
+      <div id="web01" class="inSlide">
+        <div class="svg_dia">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 900 900" style="enable-background:new 0 0 900 900;"
+                        xml:space="preserve">
+            <polygon class="dia_pen" points="450.7,9.3 12,448 452.5,888.5 893.3,447.7 "/>
+          </svg>
+        </div>
+        <div class="more"> <a href="works/samsung/index.html" target="_blank"><img src="img/more-white.svg" alt="button_more"></a>
+          <ul>
+            <li>Main & sub page</li>
+            <li>Coding</li>
+          </ul>
+        </div>
+      </div>
+      <!--//web01-->
+      <div id="web02" class="inSlide">
+        <div class="svg_dia">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 900 900" style="enable-background:new 0 0 900 900;"
+                        xml:space="preserve">
+            <polygon class="dia_pen" points="450.7,9.3 12,448 452.5,888.5 893.3,447.7 "/>
+          </svg>
+        </div>
+        <ol class="more">
+          <li><a href="works/lgnsys/index.html" target="_blank"><img src="img/more-white.svg" alt="img" ></a></li>
+          <li>LG-n-sys</li>
+          <li>Main & Login</li>
+          <li>Coding</li>
+        </ol>
+      </div>
+      <!--//web_02-->
+      <div id="web03" class="inSlide">
+        <div class="svg_dia">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 900 900" style="enable-background:new 0 0 900 900;"
+                        xml:space="preserve">
+            <polygon class="dia_pen" points="450.7,9.3 12,448 452.5,888.5 893.3,447.7 "/>
+          </svg>
+        </div>
+        <ol class="more">
+          <li> <a href="works/jy/index.html" target="_blank" ><img src="img/more-white.svg"></a></li>
+          <li>JY</li>
+          <li>website-Creating/Design</li>
+        </ol>
+      </div>
+      <!--//jy-->
+      <div id="web04" class="inSlide">
+        <div class="svg_dia">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 900 900" style="enable-background:new 0 0 900 900;"
+                        xml:space="preserve">
+            <polygon class="dia_pen" points="450.7,9.3 12,448 452.5,888.5 893.3,447.7 "/>
+          </svg>
+        </div>
+        <ol class="more">
+          <li><a href="works/tchi_kim/index.html" target="_blank" ><img src="img/more-white.svg"></a></li>
+          <li>tchaikim</li>
+          <li>Responsive Web</li>
+        </ol>
+      </div>
+      <!-- web04 --> 
+    </div>
+    <!--//portfolio_list--> 
+  </div>
+  <!--//portfolio_right_Wrap_--> 
+</section>
+<!--// page02_PORTFOLIO --> 
+
+<!-- page03_ARTWORK -->
+<section id="artwork" class="fullpage-section">
+  <div class="workWrap">
+    <div class="color">
+      <h2>ART</h2>
+    </div>
+    <div class="txt_w">
+      <h2>WORK</h2>
+    </div>
+    <!-- 01 artWorkPic -->
+    <article class="artbox art01">
+      <div class="artPic artPic01"> <a class="facy" data-fancybox-group="web" 
+                        href="img/ps_bg01.jpg" title="DeWitt design: nature of space<!-- </br><a href='artpic01.html'>Site</a> -->"> <img src="img/ps_01.png" alt="DeWitt design: nature of space"> <span>
+        <h5>artPic01</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 02 artWorkPic -->
+    <article class="artbox art02">
+      <div class="artPic artPic02"> <a class="facy" data-fancybox-group="web" 
+                        href="img/ps_bg02.jpg" title="second-hand lead serious diseases in childeren </br><!-- <a href='artpic02.html'>Site</a> -->"> <img src="img/ps_02.png" alt="none smoke"> <span>
+        <h5>artPic02</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 03 artWorkPic -->
+    <article class="artbox art03">
+      <div class="artPic artPic03"> <a class="facy" data-fancybox-group="web" 
+                        href="img/ps_bg03.jpg" title="A ballerina dances with Balaenoptera musculus  in a beauty of sunset.</br><!-- <a href='artpic03.html'>Site</a>" --> <img src="img/ps_03.png" alt="beatuy dance in a sunset"> <span>
+        <h5>artPic03</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 04 artWorkPic-->
+    <article class="artbox art04">
+      <div class="artPic artPic04"> <a class="facy" data-fancybox-group="web" 
+                        href="img/ps_bg04.jpg" title="Noth space </br><!-- <a href='artpic04.html'>Site</a> -->"> <img src="img/ps_04.png" alt="Noth space"> <span>
+        <h5>artPic04</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 05 artWorkPic -->
+    <article class="artbox art05">
+      <div class="artPic artPic05"> <a class="facy" data-fancybox-group="web" 
+                        href="img/ps_bg05.jpg" title="Audrey Hepburn:Vintage Space </br><a href='artpic04.html'>Site</a>"> <img src="img/ps_05.png" alt="udrey Hepburn: Vintage Space"> <span>
+        <h5>artPic05</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 06 artWorkPic -->
+    <article class="artbox art06">
+      <div class="artPic artPic06"> <a class="facy" data-fancybox-group="web" 
+                        href="img/ps_bg06.jpg" title="elephant WaterColor: collage </br>"> <img src="img/ps_06.png" alt="elephant"> <span>
+        <h5>artPic06</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 07 artWorkPic -->
+    <article class="artbox art07">
+      <div class="artPic artPic07"> <a class="facy" data-fancybox-group="web" 
+                        href="img/ps_bg07.jpg" title="Dream of Princess </br>"> <img src="img/ps_07.png" alt="rainbow"> <span>
+        <h5>artPic07</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 08 artWorkPic -->
+    <article class="artbox art08">
+      <div class="artPic artPic08"> <a class="facy" data-fancybox-group="web" 
+                        href="img/ps_bg08.jpg" title="magazine: collage</br>"> <img src="img/ps_08.png" alt="Dream of Princess"> <span>
+        <h5>artPic08</h5>
+        </span> </a> </div>
+    </article>
+  </div>
+  <!--//.workWrap--> 
+</section>
+<!-- page03_ARTWORK --> 
+
+<!-- page04_PaperWork -->
+<section id="pawork" class="fullpage-section">
+  <div class="workWrap">
+    <div class="color">
+      <h2>PAPER</h2>
+    </div>
+    <div class="txt_w">
+      <h2>WORK</h2>
+    </div>
+    <!-- 01 artWorkPic -->
+    <article class="artbox art01">
+      <div class="artPic artPic01"> <a class="facy" data-fancybox-group="web" 
+                        href="img/pa_bg01.jpg" title="penArt_ㅎ</br>"> <img src="img/pa_01.png" alt="penArt_ㅎㅎ"> <span>
+        <h5>paperPic01</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 02 artWorkPic -->
+    <article class="artbox art02">
+      <div class="artPic artPic02"> <a class="facy" data-fancybox-group="web" 
+                        href="img/pa_bg02.jpg" title="second-hand lead serious diseases in childeren </br><a href='artpic02.html'>Site</a>"> <img src="img/pa_02.png" alt="none smoke"> <span>
+        <h5>paperPic02</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 03 artWorkPic -->
+    <article class="artbox art03">
+      <div class="artPic artPic03"> <a class="facy" data-fancybox-group="web" 
+                        href="img/pa_bg03.jpg" title="second-hand lead serious diseases in childeren </br><a href='paperic03.html'>Site</a>"> <img src="img/pa_03.png" alt="none smoke"> <span>
+        <h5>paperPic03</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 04 artWorkPic-->
+    <article class="artbox art04">
+      <div class="artPic artPic04"> <a class="facy" data-fancybox-group="web" 
+                        href="img/pa_bg04.jpg" title="Noth space </br><a href='paperpic04.html'>Site</a>"> <img src="img/pa_04.png" alt="Noth space"> <span>
+        <h5>paperPic04</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 05 artWorkPic -->
+    <article class="artbox art05">
+      <div class="artPic artPic05"> <a class="facy" data-fancybox-group="web" 
+                        href="img/pa_bg05.jpg" title="Noth space </br><a href='paperpic05.html'>Site</a>"> <img src="img/pa_05.png" alt="Noth space"> <span>
+        <h5>paperPic05</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 06 artWorkPic -->
+    <article class="artbox art06">
+      <div class="artPic artPic06"> <a class="facy" data-fancybox-group="web" 
+                        href="img/pa_bg06.jpg" title="Noth space </br><a href='paperpic04.html'>Site</a>"> <img src="img/pa_06.png" alt="Noth space"> <span>
+        <h5>paperPic06</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 07 artWorkPic -->
+    <article class="artbox art07">
+      <div class="artPic artPic07"> <a class="facy" data-fancybox-group="web" 
+                        href="img/pa_bg07.jpg" title="Noth space </br><a href='paperpic07.html'>Site</a>"> <img src="img/pa_07.png" alt="Noth space"> <span>
+        <h5>paperPic07</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 08 artWorkPic -->
+    <article class="artbox art08">
+      <div class="artPic artPic08"> <a class="facy" data-fancybox-group="web" 
+                        href="img/pa_bg08.jpg" title="Dream of Princess </br><a href='paperpic08.html'>Site</a>"> <img src="img/pa_08.png" alt="Dream of Princess"> <span>
+        <h5>paperPic08</h5>
+        </span> </a> </div>
+    </article>
+  </div>
+  <!--//.workWrap--> 
+</section>
+<!--// page04_PaperWork -> 
+
+<!-- page05_PHOTOGRAPH -->
+<section id="photo" class="artwork fullpage-section">
+  <div class="txt_p">
+    <h2>WEB</h2>
+  </div>
+  <div class="ph_color">
+    <h2>PAGE</h2>
+  </div>
+  <div class="workWrap">
+    <article class="artbox art01">
+      <div class="artPic artPic01"> <a class="facy" data-fancybox-group="web" 
+                        href="img/web_bg01.jpg" title="DeWitt desigin: nature of space</br><a href='artpic01.html'>Site</a>"> <img src="img/web_01.png" alt="DeWitt desigin: nature of space"> <span>
+        <h5>Photo01</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 02 artWorkPic -->
+    <article class="artbox art02">
+      <div class="artPic artPic02"> <a class="facy" data-fancybox-group="web" 
+                        href="img/web_bg02.jpg" title="second-hand lead serious diseases in childeren </br><a href='artpic02.html'>Site</a>"> <img src="img/web_02.png" alt="none smoke"> <span>
+        <h5>Photo02</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 03 artWorkPic -->
+    <article class="artbox art03">
+      <div class="artPic artPic03"> <a class="facy" data-fancybox-group="web" 
+                        href="img/web_bg03.jpg" title="second-hand lead serious diseases in childeren </br><a href='artpic03.html'>Site</a>"> <img src="img/web_03.png" alt="none smoke"> <span>
+        <h5>Photo03</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 04 artWorkPic-->
+    <article class="artbox art04">
+      <div class="artPic artPic04"> <a class="facy" data-fancybox-group="web" 
+                        href="img/web_bg04.jpg" title="Noth space </br><a href='artpic04.html'>Site</a>"> <img src="img/web_04.png" alt="Noth space"> <span>
+        <h5>Photo04</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 05 artWorkPic -->
+    <article class="artbox art05">
+      <div class="artPic artPic05"> <a class="facy" data-fancybox-group="web" 
+                        href="img/web_bg05.jpg" title="Noth space </br><a href='artpic04.html'>Site</a>"> <img src="img/web_05.png" alt="Noth space"> <span>
+        <h5>Photo05</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 06 artWorkPic -->
+    <article class="artbox art06">
+      <div class="artPic artPic06"> <a class="facy" data-fancybox-group="web" 
+                        href="img/web_bg06.jpg" title="Noth space </br><a href='artpic04.html'>Site</a>"> <img src="img/web_06.png" alt="Noth space"> <span>
+        <h5>Photo06</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 07 artWorkPic -->
+    <article class="artbox art07">
+      <div class="artPic artPic07"> <a class="facy" data-fancybox-group="web" 
+                        href="img/web_bg07.jpg" title="Noth space </br><a href='artpic07.html'>Site</a>"> <img src="img/web_07.png" alt="Noth space"> <span>
+        <h5>Photo07</h5>
+        </span> </a> </div>
+    </article>
+    <!-- 08 artWorkPic -->
+    <article class="artbox art08">
+      <div class="artPic artPic08"> <a class="facy" data-fancybox-group="web" 
+                        href="img/web_bg08.jpg" title="Dream of Princess </br><a href='artpic08.html'>Site</a>"> <img src="img/web_08.png" alt="Dream of Princess"> <span>
+        <h5>Photo08</h5>
+        </span> </a> </div>
+    </article>
+  </div>
+</section>
+<!--//page05_PHOTOGRAPH --> 
+
+<!-- page06_CONTACT -->
+<section id="contact" class="fullpage-section">
+  <div class="leftWrap contact_left_Wrap">
+    <h2>CONTACT</h2>
+    <h3> If you have a message, 
+      feel free to contact to me.<br>
+      Thank you for visiting 
+      JY's portfolio web site.<br>
+      <br>
+      <!--  KaKaoTalk ID:Jin39426<br > --> 
+      jkim39426@naver.com<br>
+      010.9967.9026<br>
+      <br >
+    </h3>
+    <ol class="sns">
+      <li> <a href="http://blog.naver.com/jkim39426" target="_blank" ><img src="img/sns_b.png" alt="naver_blog_link" /></a> </li>
+      <li> <a href="https://www.facebook.com/profile.php?id=100013527153320" target="_blank" > <img src="img/sns_f.png" alt="facebook_link" /> </a> </li>
+      <li> <a href="http://instagram.com/jinyoungkristy_/" target="_blank"> <img src="img/sns_inst.png" alt="instagram_link" /> </a> </li>
+      <li> <a href="https://kr.pinterest.com/" target="_blank"> <img src="img/sns_p.png" alt="pinterest_link" /> </a> </li>
+    </ol>
+    <!--//sns--> 
+  </div>
+  <div class="rightWrap contact_right_Wrap">
+    <table>
+      <form action="mail.php" method="post">
+        <tr class="cont c01">
+          <td class="name"><label for="writer"> NAME</label>
+            <input id="writer" type="text" placeholder="이름을 입력해주세요"/></td>
+          <td><label for="celnum">CELLPHONE</label>
+            <input id="celnum" type="text" placeholder="전화번호를 입력해주세요"/></td>
+        </tr>
+        <tr class="cont c02">
+          <td colspan="2"><label for="memo">MESSAGE</label>
+            <textarea id="memo" placeholder="내용을 입력해주세요"></textarea></td>
+        </tr>
+        <tr class="cont c03">
+          <td><label for="email">EMAIL</label>
+            <input id="email" type="text" placeholder="이메일 입력해주세요"/></td>
+        </tr>
+        <tr class="cont c04">
+          <td colspan="2"><input type="submit" id="btnSend" value="send" /></td>
+        </tr>
+      </form>
+    </table>
+    <footer> </footer>
+  </div>
+</section>
+<!--// page06_CONTACT --> 
+
+<!-- Ending -->
+<section id="Ending" class="fullpage-section" >
+  <div class="ending">
+    <div id="zlayer"> <img src="img/03.png" alt=""/> <img src="img/04.png" alt=""/> </div>
+    <!-- zlayer -->
+    <h2> <img src="img/dia_w_b.png" alt="logo"> </h2>
+    <p class="text00"> PORTFOLIO<br>
+      DESIGN<br>
+      WEB<br>
+      UX<br>
+    </p>
+    <span class="text01"> Thank you for<br>
+    Visiting Dia_JY Web PORTFOLIO
+        <p class="text01-1"> ( move your mouse,
+          up down left right side ) 
+        </p>
+    </span>
+    <p class="text02"> JinYoung VD 010-9967-9026 EMAIL : JKIM39426@naver.com 2017. ALL RIGHTS RESERVED. </p>
+  </div>
+</section>
+<!--// Ending -->
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+	
+ 	/*wrap */
+	.wrap { position:absolute; width:100%; height:100%; overflow:hidden; }
+   /* page01 behind of bg01 */
+	#page01 { position:fixed; background:url(../img/bg01_back.jpg) no-repeat center; width:100%; height:100%; background-size:cover;  }
+	
+	/* page01 visual:main img01 & intro */
+	#visual { position:relative; background:url(../img/bg01.png) no-repeat center; width:90%; left:5%; height:69%; top:0; background-size:contain; }
+	#visual hgroup { width:70%; float:right; margin:10% 10% 0 0; }
+	#visual hgroup h2{ font-size:55px; line-height:55px; text-align:right; color:rgba(255,255,255,0.9); margin-bottom:10px; }
+	#visual hgroup p { line-height:25px; text-align:right; color:rgba(255,255,255,0.7); }
+	
+	/* resume */
+	#page01 #rebtn { position:absolute; width:125px; height:39px; right:10%; bottom:25px; background:rgba(239,147,147,0.8); border-radius:50px; border:none;  }
+	#page01 #rebtn a { color:#fff; font-size:18px; display:inline-block; margin-top:-18px; }
+	#page01 #rebtn:after { position:absolute; content:"DOWNLOAD"; font-size:8px; margin-top:16px; left:73%; margin-left:-50px; color:rgba(28, 55, 91, 0.8);}
+
+	/* logo */
+	#page01 h1 { position:relative; width:50%; display:inline; right:-85%; bottom:50%; z-index:5; border:1px solid #D7D1D1;}
+	h1 img{ display:block; position:relative; height:30px; z-index:300; margin-top:30px; }
+	
+	/* nav */
+	nav { position:fixed; width:50%; height:100%; background:rgba(140,173,189,0); z-index:100; left:-45%; border-right:1px solid rgba(255,255,255,0.2); }
+	nav button { position:absolute; width:50px; height:50px; border:1px solid rgba(255,255,255,0.6); border-radius:50px; background:url(../img/btnhome.png) no-repeat center 0; right:-60px; top:10px; }
+	nav button.close { background-position:center -50px; }
+
+	nav ul { position:absolute; right:100px; width:300px; top:40%; margin-top:-250px; }
+	nav ul li { margin-top:70px; display:none; margin-left:-10px; text-align:right; }
+	nav ul li:nth-child(1):before { position:absolute; margin-top:-25px; content:"01 INTRO"; font-size:12px; color:rgba(255,255,255,0.6); margin-left:57px;}
+	nav ul li:nth-child(2):before { position:absolute; margin-top:-25px; content:"02 JY INFO"; font-size:12px; color:rgba(255,255,255,0.6); margin-left:64px;}
+	nav ul li:nth-child(3):before { position:absolute; margin-top:-25px; content:"03 PORTFOLIO"; font-size:12px; color:rgba(255,255,255,0.6); margin-left:120px;}
+	nav ul li:nth-child(4):before { position:absolute; margin-top:-25px; content:"04 CELLPHONE NUMBER"; font-size:12px; color:rgba(255,255,255,0.6); margin-left:35px;} 
+	nav ul li a { font-size:40px; color:white; }
+	nav ul li a.view { color:white; }
+
+	nav ol { position:absolute; right:100px; width:300px; top:60%; margin-top:150px; }
+	nav ol li { float:right; margin-left:20px; margin-right:5px; }
+
+	#page02 { background:url(../img/bg02b.jpg) no-repeat center center; top:100%; }
+	#page02 h2 { position:relative; margin-top:150px; margin-bottom:18px; text-align:center; font-size:45px; color:rgba(255,255,255,0.7); line-height:20px;  }
+	#page02 h3 { position:relative; text-align:center; font-size:12px; color:rgba(255,255,255,0.7); font-weight:none; }
+	#page02 #box1 { position:absolute; top:0; right:-50%; width:50%; height:100%; background:rgba(239,147,147,0.5);}
+	#page02 #box2 { position:absolute; width:50%; height:100%; top:0; right:0%; background:rgba(63,78,92,0.3); }
+	#page02 article { position:absolute; width:36%; left:32%; top:50%; column-count:2; -webkit-column-count:2; -moz-column-count:2; -webkit-column-gap:20px; -moz-column-gap:20px; column-gap:20px; color:rgba(255,255,255,0.7); padding:10px; margin-top:-200px; overflow:hidden; } 
+	#page02 article p { text-align:center; font-size:14px;  margin-bottom:10px; } 
+	#page02 article p span { display:block; font-size:150px; display:block; height:200px; text-align:center; line-height:210px; margin-bottom:30px; }
+	#page02 article p:nth-child(1) span:nth-child(1) { color:rgba(239,147,147,0.5); } 
+	#page02 article h6 { position:absolute; background:white; }
+	#page02 article h6#lineTop { width:100%; height:2px; top:0; left:-120%; }
+	#page02 article h6#lineRight { height:100%; width:2px; top:-100%; right:0; }
+	#page02 article h6#lineBottom { width:100%; height:2px; bottom:0; right:-100%; }
+	#page02 article h6#lineLeft { height:100%; width:2px; bottom:-100%; left:0; } 
+	
+	#page03 { top:200%; background:#e0a8a2; background:#f8c6c0;}
+	#page03 h2 { color:#fff; text-align:center; z-index:3; width:350px; left:50%; margin-left:-170px;  position:relative; top:7%;  font-size:50px;  line-height:50px; }
+
+	.container {
+	width: 940px;
+	padding:20px;
+	margin:50px auto 0 auto;
+}
+
+
+.container {
+	width: 940px;
+	padding:20px;
+	margin:120px auto 0 auto;
+}
+
+.box {
+	width:260px;
+	height:195px;
+	margin:20px;
+	float:left;
+	position: relative;
+}
+
+.box-content {
+	display:block;
+	padding:20px;
+	width: 100%;
+	height: 100%;
+	background: #445a5a;
+	color:#ffffff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+.box-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:10;
+}
+
+a.link {
+	display:block;
+	width: 100%;
+	height: 100%;		
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:15;		
+}
+
+/* custom css styling */
+.box-content .box-wrapper {
+	width: 100%;
+	height: 100%;
+	font-size:24px;
+	display:block;
+	padding:30px 0 10px 0;
+	text-align:center;
+	margin-bottom:10px;
+	border:2px solid #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+.box-content span.name {
+	display:block;
+	text-align:center;
+	font-family:georgia;
+	font-style:italic;
+	font-size:14px;
+	font-weight:normal;
+	margin-top:5px;
+}
+
+.box-content .row {
+	margin-top:10px;
+	font-size:12px;
+	color:#ddd;
+}
+
+
+
+
+	#page04 { top:300%;  background:#f9a5a5; }
+	#page04 h2 { width:50%; left:50%; margin-left:-10%;  position:relative; top:13%; z-index:15; font-size:27px; color:#fff; line-height:30px; }
+	
+	#page04 table { width:60%; position:relative; left:44%; top:24%; margin-left:-20%;  z-index:15; text-align:center; }
+	#page04 table tr { height:60px; z-index:15; text-align:center;}
+	#page04 table tr td { position:relative; z-index:15; }
+	#page04 input { background:transparent; width:60%; height:20px; border:1px solid rgba(255, 255, 255, 0.8); font-size:12px; text-indent:5px; z-index:15; text-align:center; }
+	#page04 table #memo { width:80%;  height:250px; background:rgba(255, 255, 255, 0); border:1px solid rgba(255, 255, 255, 0.9); font-size:12px; text-indent:5px; line-height:20px; text-align:center; }
+	#page04 input#btnSend { width:50px; color:rgba(255, 255, 255, 0.8); margin-top:10px; z-index:15;}
+	#page04 textarea { width:80%;  height:40px; background:transparent; border:1px solid rgba(255, 255, 255, 0.8); font-size:12px; text-indent:5px; line-height:20px; z-index:15; text-align:center;  }
+	#page04 table tr td label { color:rgba(255, 255, 255, 0.8); position:absolute; top:-20px; z-index:15; text-align:center; }
+	#page04 h5 {  color:#fff; font-size:12px; width:550px; left:50%; margin-left:-250px;  position:absolute; z-index:15; bottom:20px; text-align:center; }
+
+
+	@media all and ( max-width:800px ) {
+	#page02 article { column-count: 1;  -webkit-column-count: 1; -moz-column-count: 1;   -webkit-column-gap: 0; 
+     -moz-column-gap: 0; 
+     column-gap: 0; }	
+}
+	
+
+

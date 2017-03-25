@@ -1,0 +1,32 @@
+
+/* -- page03_PORTFOLIO Left -- */
+	#portfolio .web-L-Wrap{ background:#fff; position:absolute; width:50%; height:100%;  top:0; left:0; z-index: 5;}
+	#portfolio .web-L-Wrap p.seroLine{ background:rgba(229, 36, 103, 0.5); position:absolute; width:1px; height:77px; left:50%; top:50%; margin-left:-25px; margin-top:103px; }
+	#portfolio .web-L-Wrap h2 { position:absolute; top:40%; margin-top:-40px; width:400px;  font-size:40px;  padding:10px; left:50%; margin-left:-200px; text-align:center; font-family: 'Raleway', sans-serif; color:#e52467;  }
+	#portfolio .web-L-Wrap ul { position:absolute; width:100px; left:50%; top:50%; margin-left:-35px; margin-top:70px;}
+	#portfolio .web-L-Wrap ul li { border:1px solid rgba(229, 36, 103, 0); box-sizing:border-box; }
+	#portfolio .web-L-Wrap ul li.view{ border:1px solid rgba(229, 36, 103, 0.5);}
+	#portfolio .web-L-Wrap ul li span { background:#e52467; }
+	#portfolio .web-L-Wrap ul li h4 { color:#e52467; }
+
+/* -- page03_PORTFOLIO Right -- */
+	#portfolio .web-R-Wrap{ position:absolute; width:50%; right:0%; height:100%;overflow:hidden;   } 
+	#portfolio .web-R-Wrap #portfolio_list{ position:absolute; width:330%; height:100%; top:0;  left:-11%;}
+	#portfolio .web-R-Wrap #portfolio_list .inSlide { position:relative; float:left; width:30%;  height:100%; margin-left:3.333%;  } 
+
+	/* Web-Work-01 */
+	#portfolio .web-R-Wrap #portfolio_list .inSlide div#ysl {width:100%; height:100%; left:0;}
+	#portfolio .web-R-Wrap #portfolio_list #ysl figure img{ position:absolute; width:100%; left:-3%; height:100%; top:0;   }	 
+ 	/* Web-Work-02 */
+	#portfolio .web-R-Wrap #portfolio_list .inSlide div#lg { width:100%; height:100%; left:0; border:1px solid lime; } 
+	#portfolio .web-R-Wrap #portfolio_list div#lg  figure img{ position:absolute; width:100%; left:0; height:100%; top:0;   }
+	/* Web-Work-31 */
+	#portfolio .web-R-Wrap #portfolio_list .inSlide div#jy { width:100%; height:100%;   }
+    #portfolio .web-R-Wrap #portfolio_list div#jy  figure img{ position:absolute; width:100%; left:-3%; height:100%; top:0;  }
+
+	/* More img */
+	#portfolio .web-R-Wrap #portfolio_list .more{ position:absolute; top:45%; left:50%; width:8%; height:65px;  z-index:2; }
+	#portfolio .web-R-Wrap #portfolio_list .more li{ text-align:center; font-family: 'Raleway', sans-serif; color:rgba(255, 255, 255,0.7);}
+	#portfolio .web-R-Wrap #portfolio_list .more li:nth-child(2) { display:block;  margin-top:9%; /*border:1px solid red;*/ }
+
+	
